@@ -1,0 +1,9 @@
+vlib work
+vlog *.*v +cover -covercells
+vsim  work.top  -cover
+coverage save -onexit cov.ucdb -du work.axi4_memory 
+add wave -radix hex /top/dut/*
+run -all
+coverage report -details -output cov_report.txt
+
+

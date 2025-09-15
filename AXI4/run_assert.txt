@@ -1,0 +1,8 @@
+vlib work
+vlog *.sv
+vsim -assertdebug +acc -voptargs=+acc work.top
+do wave.do
+
+run -all
+
+
